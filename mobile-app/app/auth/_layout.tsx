@@ -1,19 +1,37 @@
-import Container from "@/components/layout/container";
-import { SafeAreaView, ScrollView, StatusBar } from "react-native";
 import React from "react";
-import { View, Text } from "react-native";
+import { Stack } from "expo-router";
 
-const AuthLayout = ({ children }: { children: React.ReactNode }) => {
+const stacksRoute = [
+  {
+    name: "index",
+  },
+  {
+    name: "resetPassword",
+  },
+  {
+    name: "verifyOtp",
+  },
+];
+
+const AuthLayout = () => {
   return (
-    <>
-      <StatusBar />
-      <SafeAreaView>
-        <Container className="bg-red-300">
-          <Text>lorem</Text>
-          {children}
-        </Container>
-      </SafeAreaView>
-    </>
+    <Stack>
+      {stacksRoute.map((route, index: number) => {
+        return (
+          <Stack.Screen
+            name={route.name}
+            options={{
+              headerShown: false,
+              headerTintColor: "#fff",
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+            }}
+            key={index}
+          />
+        );
+      })}
+    </Stack>
   );
 };
 

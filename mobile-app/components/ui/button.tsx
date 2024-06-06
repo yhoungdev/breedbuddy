@@ -14,6 +14,7 @@ interface IButton extends TouchableOpacityProps {
   className?: string;
   children?: React.ReactNode;
   textClassName?: string;
+  buttonClassName?: string;
 }
 
 const StyledButton = styled(TouchableOpacity);
@@ -24,11 +25,12 @@ export const Button = ({
   className,
   children,
   textClassName,
+  buttonClassName,
   ...props
 }: IButton) => {
-  const defaultStyle = `py-[18px] flex items-center px-3 rounded-full w-[352px] mx-auto`;
+  const defaultStyle = `py-[15px] flex items-center px-3 rounded-full w-[352px] mx-auto`;
   return (
-    <StyledView className="mx-auto w-[325px] rounded-full">
+    <StyledView className={`mx-auto w-[325px] rounded-full ${buttonClassName}`}>
       <LinearGradient
         colors={[COLORS.accent.primary, COLORS.accent.secondary, "#FF6036"]}
         start={{ x: 0, y: 0 }}

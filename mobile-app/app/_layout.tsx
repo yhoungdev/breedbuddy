@@ -1,3 +1,4 @@
+import SafeAreaWrapper from "@/components/layout/safeAreaWrapper";
 import { Stack } from "expo-router";
 const stacksRoute = [
   {
@@ -9,23 +10,24 @@ const stacksRoute = [
 ];
 export default function RootLayout() {
   return (
-    <Stack>
-      {stacksRoute.map((route, index: number) => {
-        return (
-          <Stack.Screen
-            name={route.name}
-            options={{
-              headerShown: false,
-              headerTintColor: "#fff",
-              headerTitleStyle: {
-                fontWeight: "bold",
-              },
-            }}
-            key={index}
-          />
-        );
-      })}
-    </Stack>
+    <SafeAreaWrapper>
+      <Stack>
+        {stacksRoute.map((route, index: number) => {
+          return (
+            <Stack.Screen
+              name={route.name}
+              options={{
+                headerShown: false,
+                headerTintColor: "#fff",
+                headerTitleStyle: {
+                  fontWeight: "bold",
+                },
+              }}
+              key={index}
+            />
+          );
+        })}
+      </Stack>
+    </SafeAreaWrapper>
   );
 }
-

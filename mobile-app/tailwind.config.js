@@ -20,6 +20,10 @@ module.exports = {
           senary: "#FF5642",
           septenary: "#FF5642",
           octonary: "#FF5642",
+          pastel: "#FFF6F9",
+        },
+        gray: {
+          stroke: "#F0F2F5",
         },
       },
       gradientColorStops: (theme) => ({
