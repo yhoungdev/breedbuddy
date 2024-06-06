@@ -2,6 +2,7 @@ import { ViewContainer } from "@/components/createCustomElements";
 import AuthLayoutWrapper from "@/components/layout/authLayoutWrapper";
 import { Button } from "@/components/ui/button";
 import Input from "@/components/ui/textInput";
+import { Link } from "expo-router";
 
 import React from "react";
 
@@ -17,7 +18,9 @@ const VerifyOtp = () => {
           placeholder="Email Address"
           label="Email"
         />
-        <Button buttonClassName="my-4">Confirm Code</Button>
+        <Button buttonClassName="my-4">
+          <Link href={"/auth/updatePassword"}>Confirm Code</Link>
+        </Button>
       </ViewContainer>
     </AuthLayoutWrapper>
   );

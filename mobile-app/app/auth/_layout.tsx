@@ -11,6 +11,9 @@ const stacksRoute = [
   {
     name: "verifyOtp",
   },
+  {
+    name: "updatePassword",
+  },
 ];
 
 const AuthLayout = () => {

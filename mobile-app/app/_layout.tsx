@@ -7,6 +7,9 @@ const stacksRoute = [
   {
     name: "auth",
   },
+  {
+    name: "_app",
+  },
 ];
 export default function RootLayout() {
   return (

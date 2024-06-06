@@ -27,7 +27,9 @@ export default function Index() {
         </Typography>
 
         <ViewContainer className="flex gap-5 my-5 justify-center text-center">
-          <Button className="my-2">Create Account</Button>
+          <Button className="my-2">
+            <Link href={"/_app"}>Create Account</Link>
+          </Button>
           <Link href={"/auth"} className="text-center">
             <Typography>Sign in to exising account</Typography>
           </Link>

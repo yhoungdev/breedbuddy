@@ -2,7 +2,6 @@ import { ViewContainer } from "@/components/createCustomElements";
 import AuthLayoutWrapper from "@/components/layout/authLayoutWrapper";
 import { Button } from "@/components/ui/button";
 import Input from "@/components/ui/textInput";
-import { Link } from "expo-router";
 import React from "react";
 
 const updatePasswordScreen = () => {
