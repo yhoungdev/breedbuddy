@@ -1,0 +1,9 @@
+{
+  "name": "breedbuddy-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/breedbuddy-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["breedbuddy"],
+  "// targets": "to see all targets run: nx show project breedbuddy-e2e --web",
+  "targets": {}
+}
